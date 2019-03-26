@@ -14,6 +14,8 @@ Inför denna labb ska ni ha **installerat PHP, Apache**. Detta gör ni genom:
 1. Windows/MAC: [Xampp](https://www.apachefriends.org/index.html)
 2. Linux: [Lamp](https://howtoubuntu.org/how-to-install-lamp-on-ubuntu)
 
+**Om ni kör Windows** så är det viktigt att ni installerar en bättre lämpad konsol/terminal där `bash`-kommandon fungerar. Den får ni på köpet när ni installerar `git` [vilket ni kan göra här](https://git-scm.com/downloads). Gå inte vidare innan detta steg är avklarat.
+
 ## 1. Om PHP
 I denna del ska vi introduceras till språket PHP. Vi kommer titta på hur man kommer igång, samt skriver ett litet program i PHP. Avslutningsvis ska vi även se hur vi hanterar formulärsdata från en webbsida (alt. HTTP-anrop).
 
@@ -189,19 +191,15 @@ Om ett paket kommer i en ny version med funktionalitet som krävs för ditt proj
 
 Om projektteamet som ni jobbar med har uppdaterat projektets beroenden måste ni även uppdatera er installation. Detta görs med kommandot `composer update`. Ha för vana att köra detta kommando när ni hämtar hem en ny version av projektet.
 
----
-TODO neda: Vi behöver bestämma om vi vill ha Linux eller Windows-kommandon. Rekommenderar vi Git Bash för Windows?
----
-
 ### 2.3. Skriv ett enkelt program med hjälp av Composer
 
-I det här avsnittet skriver vi ett väldigt enkelt program som loggar utskrifter till en fil. Vi utgår från programmet som ni skrev i avsnitt 1.2. Stå kvar i *testing*-projektet från uppgift 2.2, men kopiera över *index.php* från 1.1 till aktuell katalog med hjälp av kommandot `cp`, som står för *copy*. Om er *index.php* ligger i */home/student/*, kopierar ni filen genom att skriva
+I det här avsnittet skriver vi ett väldigt enkelt program som loggar utskrifter till en fil. Vi utgår från programmet som ni skrev i avsnitt 1.2. Stå kvar i *testing*-projektet från uppgift 2.2, men kopiera över *index.php* från 1.1 till aktuell katalog genom er filhanterare, alternativt med hjälp av kommandot `cp`, som står för *copy*. Om er *index.php* ligger i */home/student/*, kopierar ni filen genom att skriva
 
 ```
 $ cp /home/student/index.php .
 ```
 
-Punkten läses ut som *"hit"* eller *"här"*. Öppna sedan filen med `nano` och ladda in era beroenden genom att låta de första fem raderna i filen se ut så här:
+Punkten läses ut som *"hit"* eller *"här"*. Öppna sedan filen med valfri textredigerare och ladda in era beroenden genom att låta de första fem raderna i filen se ut så här:
 
 ```php
 <?php
