@@ -32,3 +32,7 @@ På denna sida hittar du information som är kopplat till kursen DA288A - Molnba
 
 ## Resurser
 - [Installation av kurserns verktyg](/Resources/tools.md)
+
+## Schema och Canvas
+- [Kursens schema](http://schema.mau.se/setup/jsp/Schema.jsp?startDatum=idag&intervallTyp=m&intervallAntal=6&sprak=SV&sokMedAND=true&forklaringar=true&resurser=k.DA288A-20191-98013-)
+- [Kursen på Canvas](https://mau.instructure.com/courses/2318)
