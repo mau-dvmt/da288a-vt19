@@ -1,3 +1,3 @@
 # Föreläsning 1: Kursintroduktion och intro till PHP
 
-Kommer snart!
+[Presentationen hittar ni här](lecture.pdf)
