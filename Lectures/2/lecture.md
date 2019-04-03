@@ -10,7 +10,7 @@ För att komma igång med filerna nedan, navigera till mappen där ni sparat fil
 php -S localhost:8080
 ```
 
-Surfa sedan till adressen `localhost:8080` i din webbläsare. (**OBS**, ni behöver ha installerat PHP för att detta ska fungera).
+Surfa sedan till adressen `localhost:8080` i din webbläsare. (**OBS**, ni behöver ha installerat PHP för att detta ska fungera). [Här kan ni se live demo av tjänsten](http://ddwap.mah.se/tsanti/VT2019/DA288A/Guestbook/index.php)
 
 ### index.php
 
