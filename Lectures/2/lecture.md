@@ -1,6 +1,7 @@
 # Föreläsning 2: Mer PHP samt paket- och beroendehantering med Composer
 
 - [Presentation - Introduktion till PHP](php.pdf)
+- [Presentation - Pakethantering med Composer](composer.pdf)
 
 ## Kod från dagens föreläsning
 
