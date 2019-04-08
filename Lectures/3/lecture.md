@@ -1,3 +1,3 @@
 # Föreläsning 3: Molntjänster - Grundläggande
 
-Kommer snart!
+[Presentationen hittar ni här](cloud_computing.pdf)
