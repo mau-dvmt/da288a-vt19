@@ -1,3 +1,3 @@
 # Föreläsning 4: Molntjänster - Deployment
 
-Kommer snart!
+[Presentationen hittar ni här](deployment.pdf)
