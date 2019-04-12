@@ -468,9 +468,9 @@ Därefter definierar vi upp våra tre tjänster *mysql*, *composer* och *web*:
 ```yaml
 version: "3.1"
 services:
-	mysql:
-	composer:
-	web:
+    mysql:
+    composer:
+    web:
 ```
 
 #### Webbservern
@@ -480,17 +480,17 @@ Det är dags att börja fylla ut våra tjänster, och vi börjar med den som är
 ```yaml
 version: "3.1"
 services:
-	mysql:
-	composer:
-	web:
-		restart: "yes"
-		build: .
-		ports:
-		 - "8000:80"
-		container_name: "nice-site"
-		volumes:
-		 - ./src:/var/www/html
-		 - ./vendor:/var/www/vendor
+    mysql:
+    composer:
+    web:
+        restart: "yes"
+        build: .
+        ports:
+         - "8000:80"
+        container_name: "nice-site"
+        volumes:
+         - ./src:/var/www/html
+         - ./vendor:/var/www/vendor
 ```
 
 Vi har nu berättat för Docker Compose att vår web-container ska byggas från Dockerfilen som finns i den här katalogen (med hjälp av `.`) och att den ska exponera port 80, till vilken vi vidarebefordrar anrop från porten 8000 i värdsystemet. Vi berättar också att containern ska heta *nice-site* och att den ska montera *src/* och *vendor/* som volymer. Slutligen säger vi till Docker att starta om containern om den stängs av.
@@ -503,22 +503,22 @@ Vi går vidare och tittar på Composer:
 ```yaml
 version: "3.1"
 services:
-	mysql:
-	composer:
-		restart: "no"
-		image: composer
-		command: install
-		volumes:
-		 - .:/app
-	web:
-		restart: "yes"
-		build: .
-		ports:
-		 - "8000:80"
-		container_name: "nice-site"
-		volumes:
-		 - ./src:/var/www/html
-		 - ./vendor:/var/www/vendor
+    mysql:
+    composer:
+        restart: "no"
+        image: composer
+        command: install
+        volumes:
+         - .:/app
+    web:
+        restart: "yes"
+        build: .
+        ports:
+         - "8000:80"
+        container_name: "nice-site"
+        volumes:
+         - ./src:/var/www/html
+         - ./vendor:/var/www/vendor
 ```
 
 När Composer-containern körs, körs den bara en gång (tack vare `restart: "no"`). Den sätter upp alla beroenden i nuvarande katalog (som ju är vår volym) och stängs sedan av igen.
@@ -531,34 +531,34 @@ Slutligen tar vi och bygger upp vår MySQL-service.
 ```yaml
 version: "3.1"
 services:
-	mysql:
-		image: mysql:8.0
-		container_name: "mysql-docker"
-		command: --init-file /data/init.sql
-		environment:
-		 - MYSQL_ROOT_PASSWORD=supersecret
-		 - MYSQL_DATABASE=dockertest
-		 - MYSQL_USER=dockeruser
-		 - MYSQL_PASSWORD=notreallysecret
-		ports:
-		 - "33060:3306"
-		volumes:
-		 - ./database:/var/lib/mysql
-		 - ./init.sql:/data/init.sql
-	composer:
-		restart: "no"
-		image: composer
-		command: install
-		volumes:
-		 - .:/app
-	web:
-		build: .
-		ports:
-		 - "8000:80"
-		container_name: "nice-site"
-		volumes:
-		 - ./src/:/var/www/html
-		 - ./vendor/:/var/www/vendor
+    mysql:
+        image: mysql:8.0
+        container_name: "mysql-docker"
+        command: --init-file /data/init.sql
+        environment:
+         - MYSQL_ROOT_PASSWORD=supersecret
+         - MYSQL_DATABASE=dockertest
+         - MYSQL_USER=dockeruser
+         - MYSQL_PASSWORD=notreallysecret
+        ports:
+         - "33060:3306"
+        volumes:
+         - ./database:/var/lib/mysql
+         - ./init.sql:/data/init.sql
+    composer:
+        restart: "no"
+        image: composer
+        command: install
+        volumes:
+         - .:/app
+    web:
+        build: .
+        ports:
+         - "8000:80"
+        container_name: "nice-site"
+        volumes:
+         - ./src/:/var/www/html
+         - ./vendor/:/var/www/vendor
 ```
 
 Här har vi definierat en MySQL-server baserad på version 8.0 som vi kallar för *mysql-docker*. När den startas upp körs initieringsfilen */data/init.sql*, som vid behov skapar en databas och en väldigt enkel tabell. Vi anger även vilka uppgifter som behövs för att logga in på MySQL-servern under direktivet *environment*. MySQL-servern lyssnar på port 3306, och vi låter värdsystemet vidarebefordra alla anrop till port 33060 hit. Sammantaget innebär detta att du anropar MySQL på *localhost:33060* med användaruppgifterna *dockeruser/notreallysecret*.
