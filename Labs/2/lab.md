@@ -232,6 +232,7 @@ Det du ser är en lista över alla kataloger och filer som finns i rotkatalogen 
 Vi är trötta på den här imagen och vill ta bort den. Gör det genom att skriva
 
 ```bash
+$ docker container prune
 $ docker image rm xxxx
 ```
 
@@ -440,11 +441,145 @@ Skicka med filen till containern genom att skriva
 
 ```bash
 $ cd ..
-$ docker run --name mysql-docker -e MYSQL_ROOT_PASSWORD=supersecret -v $PWD/database/:/var/lib/mysql -v $PWD/database/init.sql:/data/init.sql -d mysql:8.0 init-file /data/init.sql
+$ docker run --name mysql-docker -e MYSQL_ROOT_PASSWORD=supersecret -v $PWD/database/:/var/lib/mysql -v $PWD/init.sql:/data/init.sql -d mysql:8.0 init-file /data/init.sql
 ```
 
-Usch, nu blir det mycket... Det hade varit gött om vi kunnat automatisera det här på något sätt.
+Nu har vi en container som kör en databas som är uppe och snurrar. Vad vi nu saknar är lite inloggningsuppgifter och annat, och det bör också skrivas in. Usch, nu blir det mycket... Det hade varit gött om vi kunnat automatisera det här på något sätt. Därför:
 
 ### Docker Compose
 
-// TODO: skriv en docker-compose.yml
+Docker Compose är ett verktyg för att hantera applikationer som består av flera containers. Vi kommer att göra en applikation som består av de tre containers som vi arbetat med ovan: en installationscontainer, en databascontainer och en webbserver. Vi börjar med att skapa filen *docker-compose.yml*:
+
+```bash
+$ touch docker-compose.yml
+```
+
+Öppna upp filen i en textredigerare.
+
+
+*docker-compose.yml* är en textfil som skrivs i språket YAML, som påminner lite om JSON. Vi börjar med att ange vilken version av Docker Compose vi vill använda. Den senaste heter 3.1, och det låter ju lovande. Skriv följande
+
+```yaml
+version: "3.1"
+```
+
+Därefter definierar vi upp våra tre tjänster *mysql*, *composer* och *web*:
+
+```yaml
+version: "3.1"
+services:
+	mysql:
+	composer:
+	web:
+```
+
+#### Webbservern
+
+Det är dags att börja fylla ut våra tjänster, och vi börjar med den som är enklast: webbservern.
+
+```yaml
+version: "3.1"
+services:
+	mysql:
+	composer:
+	web:
+		restart: "yes"
+		build: .
+		ports:
+		 - "8000:80"
+		container_name: "nice-site"
+		volumes:
+		 - ./src:/var/www/html
+		 - ./vendor:/var/www/vendor
+```
+
+Vi har nu berättat för Docker Compose att vår web-container ska byggas från Dockerfilen som finns i den här katalogen (med hjälp av `.`) och att den ska exponera port 80, till vilken vi vidarebefordrar anrop från porten 8000 i värdsystemet. Vi berättar också att containern ska heta *nice-site* och att den ska montera *src/* och *vendor/* som volymer. Slutligen säger vi till Docker att starta om containern om den stängs av.
+
+#### Composer
+
+Vi går vidare och tittar på Composer:
+
+
+```yaml
+version: "3.1"
+services:
+	mysql:
+	composer:
+		restart: "no"
+		image: composer
+		command: install
+		volumes:
+		 - .:/app
+	web:
+		restart: "yes"
+		build: .
+		ports:
+		 - "8000:80"
+		container_name: "nice-site"
+		volumes:
+		 - ./src:/var/www/html
+		 - ./vendor:/var/www/vendor
+```
+
+När Composer-containern körs, körs den bara en gång (tack vare `restart: "no"`). Den sätter upp alla beroenden i nuvarande katalog (som ju är vår volym) och stängs sedan av igen.
+
+#### MySQL
+
+Slutligen tar vi och bygger upp vår MySQL-service.
+
+
+```yaml
+version: "3.1"
+services:
+	mysql:
+		image: mysql:8.0
+		container_name: "mysql-docker"
+		command: --init-file /data/init.sql
+		environment:
+		 - MYSQL_ROOT_PASSWORD=supersecret
+		 - MYSQL_DATABASE=dockertest
+		 - MYSQL_USER=dockeruser
+		 - MYSQL_PASSWORD=notreallysecret
+		ports:
+		 - "33060:3306"
+		volumes:
+		 - ./database:/var/lib/mysql
+		 - ./init.sql:/data/init.sql
+	composer:
+		restart: "no"
+		image: composer
+		command: install
+		volumes:
+		 - .:/app
+	web:
+		build: .
+		ports:
+		 - "8000:80"
+		container_name: "nice-site"
+		volumes:
+		 - ./src/:/var/www/html
+		 - ./vendor/:/var/www/vendor
+```
+
+Här har vi definierat en MySQL-server baserad på version 8.0 som vi kallar för *mysql-docker*. När den startas upp körs initieringsfilen */data/init.sql*, som vid behov skapar en databas och en väldigt enkel tabell. Vi anger även vilka uppgifter som behövs för att logga in på MySQL-servern under direktivet *environment*. MySQL-servern lyssnar på port 3306, och vi låter värdsystemet vidarebefordra alla anrop till port 33060 hit. Sammantaget innebär detta att du anropar MySQL på *localhost:33060* med användaruppgifterna *dockeruser/notreallysecret*.
+
+#### Kör Docker Compose
+
+Slutligen ska vi testa att köra igång våra containers. Vi skriver följande kommandon:
+
+```bash
+$ docker container prune
+$ docker-compose up -d
+```
+
+Nu kommer Docker Compose att spinna upp tre stycken containers. Säkerställ att de fungerar genom att gå in på [http://localhost:8000](http://localhost:8000).
+
+Avsluta genom att skriva
+
+```bash
+$ docker-compose down
+```
+
+## Azure
+
+När labben släpptes hade vi inte fått tillgång till våra Azure-konton än. Om du är på labben - smit fram till Johan, så tittar vi på det tillsammans. Om du är hemma: ta en titt på [Deploy to an Azure Web App for Containers](https://docs.microsoft.com/en-us/azure/devops/pipelines/apps/cd/deploy-docker-webapp?view=azure-devops).
