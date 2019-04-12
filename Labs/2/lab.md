@@ -483,7 +483,6 @@ services:
     mysql:
     composer:
     web:
-        restart: "yes"
         build: .
         ports:
          - "8000:80"
@@ -511,7 +510,6 @@ services:
         volumes:
          - .:/app
     web:
-        restart: "yes"
         build: .
         ports:
          - "8000:80"
