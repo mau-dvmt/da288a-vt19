@@ -342,10 +342,10 @@ kommer du att se att feature-branchen är borttagen och att du är tillbaka i *d
 
 #### Release-brancher
 
-Nästa steg är att göra en release. Eftersom vårt projekt är bra nog för en publik release vill vi namnge den versionen *1.0.0*. Skapa en release genom att köra
+Nästa steg är att göra en release. Eftersom vårt projekt är bra nog för en publik release vill vi namnge den versionen *1.0*. Skapa en release genom att köra
 
 ```bash
-$ git flow release start 1.0.0
+$ git flow release start 1.0
 ```
 
 Passa på att uppdatera beskrivningen av ditt projekt genom att öppna *composer.json* och gör en mindre ändring av värdet som nyckeln *description* pekar på. Spara sedan och gör en commit.
@@ -358,10 +358,10 @@ Här gör vi en mindre paus för att simulera en merge-konflikt som du garantera
 $ git checkout develop
 ```
 
-Gör en ny, men annorlunda förändring av projektbeskrivningen och skapa en ny commit. När du är klar, växla tillbaka till release-grenen genom att skriva
+Gör en ny, men annorlunda förändring av projektbeskrivningen i *composer.json* och skapa en ny commit. När du är klar, växla tillbaka till release-grenen genom att skriva
 
 ```bash
-$ git checkout release/1.0.0
+$ git checkout release/1.0
 ```
 
 #### Förbered en release
@@ -369,10 +369,10 @@ $ git checkout release/1.0.0
 Vi är nu klara att göra releasen genom att skriva följande:
 
 ```bash
-$ git flow release finish 1.0.0
+$ git flow release finish 1.0
 ```
 
-Du kommer nu att få ange ett commit-meddelande med hjälp av nano. När du är nöjd, spara och avsluta. Du kommer direkt att skickas till nano igen, den här gången för att ange ett meddelande rörande release 1.0.0-taggen. Ange något bra, exempelvis "My first release. Yay!" Du kommer att få ett felmeddelande om att det uppstått en konflikt som du måste lösa. Vilka filer som bråkar ser du genom att skriva
+Du kommer nu att få ange ett commit-meddelande. När du är nöjd, spara och avsluta. Du kommer direkt att skickas till nano igen, den här gången för att ange ett meddelande rörande release 1.0-taggen. Ange något bra, exempelvis "My first release. Yay!" Du kommer att få ett felmeddelande om att det uppstått en konflikt som du måste lösa. Vilka filer som bråkar ser du genom att skriva
 
 ```bash
 $ git status
@@ -387,17 +387,17 @@ Vi vet från ovan att vi måste fixa *composer.json*, så vi öppnar upp den fil
 "description": "Beskrivningen som finns i develop",
 =======
 "description": "Beskrivningen som finns i release-branchen",
->>>>>>> 1.0.0
+>>>>>>> 1.0
 ```
 
-Spara den rad som finns mellan `=======` och `>>>>>>> 1.0.0` och ta bort de övriga fyra. I en verklig konflikt hade det troligtvis funnits större problem, och då kan ett grafisk verktyg vara enklare att använda. Mer information om merge-konflikter [finns på GitHub](https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/).
+Spara den rad som finns mellan `=======` och `>>>>>>> 1.0` och ta bort de övriga fyra. I en verklig konflikt hade det troligtvis funnits större problem, och då kan ett grafisk verktyg vara enklare att använda. Mer information om merge-konflikter [finns på GitHub](https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/).
 
 #### Slutför releasen
 
 Vi är nu slutligen klara att slutföra releasen. Skriv
 
 ```bash
-$ git flow release finish 1.0.0
+$ git flow release finish 1.0
 ```
 
 igen. Notera att Git har sparat våra meddelanden från förra försöket och du behöver därför inte skriva in dem igen. När vi är klara med releasen, vill vi så klart göra en push till GitHub:
