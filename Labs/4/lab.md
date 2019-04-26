@@ -313,7 +313,7 @@ body {
 }
 ```
 
-och spara sedan innan du avslutar programmet. Öppna nu upp PHP-filen och lägg till fölljande rad i head-elementet:
+och spara sedan innan du avslutar programmet. Öppna nu upp PHP-filen och lägg till följande rad i head-elementet:
 
 ```html
 <link rel="stylesheet" type="text/css" href="background.css">
@@ -363,6 +363,8 @@ Gör en ny, men annorlunda förändring av projektbeskrivningen i *composer.json
 ```bash
 $ git checkout release/1.0
 ```
+
+Öppna upp *composer.json* igen och ändra projektbeskrivningen även här. Eftersom de båda versionerna av *composer.json* ligger på olika grenar, kommer Git snart att få ett delikat problem att lösa, och det kommer du att få hjälpa till med.
 
 #### Förbered en release
 
