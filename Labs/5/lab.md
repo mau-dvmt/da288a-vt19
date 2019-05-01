@@ -46,11 +46,11 @@ php -S localhost:8000 -t public
 ```
 Surfa sedan till adressen [http://localhost:8000/](http://localhost:8000/) för att se att det fungerar som det ska! Det borde se ut något i stil med detta:
 
-![Lumen installation](lumen_installed.png)
+![Lumen installation](lumen-installed.png)
 
-# 3. En ny webbtjänst blir till!
+## 3. En ny webbtjänst blir till!
 
-## 3.1. Routes
+### 3.1. Routes
 Börja med att skapa de routes (som ni kom fram till i del 1. av labben), se [lumens dokumentation](https://lumen.laravel.com/docs/5.8/routing) om ni behöver fräscha upp minnet hur man gör detta. Ni bör alltså skapa routes för att `skapa`, `lista`, `visa`, `uppdatera` & `radera` produkter. Dubbelkolla att routes fungerar genom exempelutskrifter, t.ex.
 
 ```php
@@ -61,7 +61,7 @@ $router->get('/products', function () {
 
 *OBS*. För att testa andra anrop än `GET`-anrop till er webbtjänst rekommenderar vi att ni använder [Postman](https://www.getpostman.com/).
 
-## 3.2. Datakälla - produkter
+### 3.2. Datakälla - produkter
 Skapa en datakälla med produkter (i t.ex. `json`), eller använd denna exempelfil nedan:
 ```json
 {
@@ -101,7 +101,7 @@ $router->get('/', function () {
 });
 ```
 
-## 3.3. Fortsätt att bygga ut ert API
+### 3.3. Fortsätt att bygga ut ert API
 I denna del av laborationen ska ni bygga funktioner för att:
 - Visa en specifik produkt
 - Lägga till en produkt
