@@ -5,7 +5,7 @@ Denna laboration innebär två delar.
 1. Ett första Lumen-projekt, med fokus på routes & JSON-formaterad data
 2. Ett Lumen-projekt, med fokus på controllers, modeller/ORM, databas
 
-# Del 1
+# Del 1 - Routes & JSON
 
 I denna laboration ska vi använda ramverket [Lumen](http://lumen.laravel.com) för att bygga ett webb-API. Vårt API ska vara väldigt enkelt och hantera en samling av produkter. Vårt API ska slutligen kunna erbjuda att:
 - Lista alla produkter
@@ -13,6 +13,7 @@ I denna laboration ska vi använda ramverket [Lumen](http://lumen.laravel.com) f
 - Skapa en ny produkt
 - Uppdatera en produkt
 - Radera en produkt
+
 Under labben kommer vi att jobba med olika delar av lumen. [Lumens dokumentation](https://lumen.laravel.com/docs/) är mycket bra att ha nära till hands då.
 
 ## 1. Skissa upp ert API
@@ -34,10 +35,10 @@ composer global require "laravel/lumen-installer"
 Nu är vi redo att följa [installationsguiden](https://lumen.laravel.com/docs/) på lumens webbplats. Navigera till önskad plats där vi vill att projektet ska ligga och kör:
 
 ```bash
-lumen new lab3
+lumen new lab5
 ```
 
-*lab3* ovan är namnet på projektet som skapas.
+*lab5* ovan är namnet på projektet som skapas.
 
 Testa att allt fungerar genom att i terminalen navigera till projektet och starta en PHP-server genom:
 ```bash
@@ -45,7 +46,7 @@ php -S localhost:8000 -t public
 ```
 Surfa sedan till adressen [http://localhost:8000/](http://localhost:8000/) för att se att det fungerar som det ska! Det borde se ut något i stil med detta:
 
-![Lumen installation](lumen_installation.png)
+![Lumen installation](lumen_installed.png)
 
 # 3. En ny webbtjänst blir till!
 
@@ -101,15 +102,16 @@ $router->get('/', function () {
 ```
 
 ## 3.3. Fortsätt att bygga ut ert API
-I denna del av laborationen ska ni bygga funktioner för
+I denna del av laborationen ska ni bygga funktioner för att:
 - Visa en specifik produkt
 - Lägga till en produkt
+
 Ytterliggare funktioner för ert API lämnar vi till den andra delen av laborationen.
 
 ## 4. Klar?
 När denna del av laborationen klar, visa & reflektera gärna tillsammans med labbhandledaren.
 
-# Del 2
+# Del 2 - Controllers / Models / Databas, m.m.
 
 I denna labb ska vi fortsätta att lära oss om de olika komponenterna i Lumen, för att effektivisera och förbättra hur vi utvecklar webbapplikationer. Vi kommer att fokusera på:
 - Controllers
