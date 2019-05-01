@@ -1,3 +1,3 @@
 # Laboration 3: Dropin med PHP/HTML/CSS/JS
 
-Kommer snart!
+Ingen labb - bara att komma förbi för frågor / undringar om kursen hittills.
