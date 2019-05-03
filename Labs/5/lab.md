@@ -152,13 +152,13 @@ De ska ha följande relationer:
 - En produkt kan ha flera recensioner
 - En recension kan bara tillhöra en produkt
 
-Inspireras gärna av [tillhörande föreläsning](#) och föreläsningens exempel som ni kan hitta [här på GitHub](#) (kommer snart...).
+Inspireras gärna av [tillhörande föreläsning](/Lectures/8/lecture.md) och föreläsningens exempel som ni kan hitta [här på GitHub](https://github.com/Tibbelit/da288a-vt19-lumen).
 
 #### 2.1.1 Rita ett ER-diagram
 Utifrån beskrivningen ovan, skapa ett ER-diagram. Diskutera gärna ER-diagrammet med era kursare och handledare för att få detta korrekt innan ni går vidare.
 
 #### 2.1.2. Skapa migrations
-Nu är dags för er att skapa tabellerna i databasen genom `migrations`. Känner ni er inte bekväma mer `migrations` så läs den [officiella dokumentation](https://laravel.com/docs/5.8/migrations), titta på hur vi skapade våra migrations i [senaste föreläsningen](#) och titta på de `schema` vi skapade för våra `migrations` på föreläsningen [genom GitHub](#) (kommer snart...).
+Nu är dags för er att skapa tabellerna i databasen genom `migrations`. Känner ni er inte bekväma mer `migrations` så läs den [officiella dokumentation](https://laravel.com/docs/5.8/migrations), titta på hur vi skapade våra migrations i [senaste föreläsningen](/Lectures/8/lecture.md) och titta på de `schema` vi skapade för våra `migrations` på föreläsningen [genom GitHub](https://github.com/Tibbelit/da288a-vt19-lumen).
 
 Skapa följande tabeller (tänk på att följa namngivningskonventaioner för laravel/lumen: singular och gemener):
 - products
@@ -197,7 +197,7 @@ En databas utan data är inte speciellt roligt! Det är därför dags för er at
 - Skapa kopplingar mellan produkter och butiker (många till många-relation)
 - Skapa minst tre recensioner som ni kopplar till valfria produkter.
 
-Känner ni er inte bekväma mer `seeding` så läs den [officiella dokumentation](https://laravel.com/docs/5.8/seeding), titta på hur vi skapade våra seeds i [senaste föreläsningen](#) och titta på de `inserts` vi skapade för våra `seeding` på föreläsningen [genom GitHub](#) (kommer snart...).
+Känner ni er inte bekväma mer `seeding` så läs den [officiella dokumentation](https://laravel.com/docs/5.8/seeding), titta på hur vi skapade våra seeds i [senaste föreläsningen](/Lectures/8/lecture.md) och titta på de `inserts` vi skapade för våra `seeding` på föreläsningen [genom GitHub](https://github.com/Tibbelit/da288a-vt19-lumen).
 
 När ni skapat och definierat `seeds` för tabellerna ovan så kör
 ```bash
@@ -220,7 +220,7 @@ De routes som ni skapar ska skicka vidare anropet till en controller vid namn `P
         - Vilka butiker den finns i
         - Recensioner kring produkten
 
-Behöver ni inspiration för hur detta ska göras, så titta i den [officiella dokumentation](https://laravel.com/docs/5.8/seeding), samt i det exempel som vi [gjorde på föreläsningen](#) (kommer snart...). Ni ska göra i princip samma sak som vi gjorde med filmerna.
+Behöver ni inspiration för hur detta ska göras, så titta i den [officiella dokumentation](https://laravel.com/docs/5.8/seeding), samt i det exempel som vi [gjorde på föreläsningen](https://github.com/Tibbelit/da288a-vt19-lumen). Ni ska göra i princip samma sak som vi gjorde med filmerna.
 
 #### Viktigt!
 För att kunna använda ORM så avkommentera följande rader i filen `bootstrap/app.php`:
