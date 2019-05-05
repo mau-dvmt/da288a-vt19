@@ -1,4 +1,4 @@
-# Labb 6, Laravel
+# Labb 6, Laravel - Webbapplikation med inloggning
 
 I denna labb ska vi titta närmre på Laravel och bygga vår första webbapplikation med ett GUI. Laborationen kommer vara uppbyggd stegvis och kommer kräva att ni tittar nämre och lär er att hitta i [Laravels dokumentation](https://laravel.com/docs/5.8). Tacksamt nog är Laravel ett väldokumenterat ramverk med både tydliga förklaring och mycket kodexempel. Så vid varje del i laboration så kommer det att refereras till olika delar av Laravels dokumentation, där ni förväntas att hitta svar på eventuella frågor.
 
