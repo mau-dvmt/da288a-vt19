@@ -1,0 +1,42 @@
+[
+    {
+        "id":1,
+        "title":"iPhone 5s",
+        "brand":"Apple",
+        "image":"http:\/\/www.three.co.uk\/static\/images\/device_pages\/MobileVersion\/Apple\/iPhone_5s\/Space_Grey\/desktop\/1.jpg",
+        "description":"Apples iPhone 5S \u00e4r uppgraderingen av iPhone 5. 5S har samma m\u00e5tt och sk\u00e4rmtyp som f\u00f6reg\u00e5ngaren, men telefonen har nu en fingeravtrycksl\u00e4sare samt ny kamera med tv\u00e5f\u00e4rgsblixt",
+        "price":2999,
+        "created_at":null,
+        "updated_at":null
+    },
+    {
+        "id":2,
+        "title":"Galaxy s7",
+        "brand":"Samsung",
+        "image":"https:\/\/www.att.com\/catalog\/en\/skus\/images\/samsung-galaxy%20s7%20edge-blue%20coral-450x350.png",
+        "description":"Den nya generationen av Galaxy Smartphones \u00e4r h\u00e4r. Samsung Galaxy S7 och S7 Edge har den perfekta balansen mellan funktion och form.",
+        "price":5999,
+        "created_at":null,
+        "updated_at":null
+    },
+    {
+        "id":3,
+        "title":"G6",
+        "brand":"LG",
+        "image":"http:\/\/www.lg.com\/uk\/images\/mobile-phones\/md05804712\/gallery\/G6-medium01.jpg",
+        "description":"P\u00e5 samma s\u00e4tt som normalstora telefoner fr\u00e5n ett par \u00e5r sedan k\u00e4nns pyttesm\u00e5 idag v\u00e4njer man sig snabbt vid den stora sk\u00e4rmen i LG G6.",
+        "price":6499,
+        "created_at":null,
+        "updated_at":null
+    },
+    {
+        "id":4,
+        "title":"Elite",
+        "brand":"HP",
+        "image":"https:\/\/media.dustin.eu\/image\/193471\/400\/320\/hp-elite-x3-dual-sim-headset-64gb-svart-krom.jpg",
+        "description":"HP Elite x3 kombinerar persondatorns kraft och produktivitet, surfplattans mobilitet och smarta telefonens smidiga uppkoppling.",
+        "price":5499,
+        "created_at":null,
+        "updated_at":null
+    }
+]

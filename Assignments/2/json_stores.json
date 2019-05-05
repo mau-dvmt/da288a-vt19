@@ -1,0 +1,30 @@
+[
+    {
+        "id":1,
+        "name":"Elgiganten",
+        "city":"Lund",
+        "created_at":null,
+        "updated_at":null
+    },
+    {
+        "id":2,
+        "name":"Media Markt",
+        "city":"Malm\u00f6",
+        "created_at":null,
+        "updated_at":null
+    },
+    {
+        "id":3,
+        "name":"Expert",
+        "city":"Staffanstorp",
+        "created_at":null,
+        "updated_at":null
+    },
+    {
+        "id":4,
+        "name":"Siba",
+        "city":"Helsingborg",
+        "created_at":null,
+        "updated_at":null
+    }
+]

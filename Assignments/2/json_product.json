@@ -1,0 +1,54 @@
+{
+    "id":2,
+    "title":"Galaxy s7",
+    "brand":"Samsung",
+    "image":"https:\/\/www.att.com\/catalog\/en\/skus\/images\/samsung-galaxy%20s7%20edge-blue%20coral-450x350.png",
+    "description":"Den nya generationen av Galaxy Smartphones \u00e4r h\u00e4r. Samsung Galaxy S7 och S7 Edge har den perfekta balansen mellan funktion och form.",
+    "price":5999,
+    "created_at":null,
+    "updated_at":null,
+    "reviews":[
+        {
+            "id":3,
+            "name":"Johan",
+            "comment":"Den \u00e4r helt okej!",
+            "grade":3,
+            "product_id":2,
+            "created_at":null,
+            "updated_at":null
+        },
+        {
+            "id":4,
+            "name":"Anton",
+            "comment":"Bra, men har m\u00f6jlighet att f\u00f6rb\u00e4ttras!",
+            "grade":4,
+            "product_id":2,
+            "created_at":null,
+            "updated_at":null
+        }
+    ],
+    "stores":[
+        {
+            "id":1,
+            "name":"Elgiganten",
+            "city":"Lund",
+            "created_at":null,
+            "updated_at":null,
+            "pivot":{
+                "product_id":2,
+                "store_id":1
+            }
+        },
+        {
+            "id":3,
+            "name":"Expert",
+            "city":"Staffanstorp",
+            "created_at":null,
+            "updated_at":null,
+            "pivot":{
+                "product_id":2,
+                "store_id":3
+            }
+        }
+    ]
+}

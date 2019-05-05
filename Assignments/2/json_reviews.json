@@ -1,0 +1,74 @@
+[
+    {
+        "id":1,
+        "name":"Anton",
+        "comment":"Superbra telefon, lite gammal bara",
+        "grade":5,
+        "product_id":1,
+        "created_at":null,
+        "updated_at":null
+    },
+    {
+        "id":2,
+        "name":"Johan",
+        "comment":"\u00c4pplen \u00e4r goda!",
+        "grade":3,
+        "product_id":1,
+        "created_at":null,
+        "updated_at":null
+    },
+    {
+        "id":3,
+        "name":"Johan",
+        "comment":"Den \u00e4r helt okej!",
+        "grade":3,
+        "product_id":2,
+        "created_at":null,
+        "updated_at":null
+    },
+    {
+        "id":4,
+        "name":"Anton",
+        "comment":"Bra, men har m\u00f6jlighet att f\u00f6rb\u00e4ttras!",
+        "grade":4,
+        "product_id":2,
+        "created_at":null,
+        "updated_at":null
+    },
+    {
+        "id":5,
+        "name":"Anton",
+        "comment":"LG f\u00f6rv\u00e5nar med en s\u00e5h\u00e4r bra telefon!",
+        "grade":5,
+        "product_id":3,
+        "created_at":null,
+        "updated_at":null
+    },
+    {
+        "id":6,
+        "name":"Johan",
+        "comment":"Bra med m\u00e5nga alternativ p\u00e5 Android-marknaden",
+        "grade":4,
+        "product_id":3,
+        "created_at":null,
+        "updated_at":null
+    },
+    {
+        "id":7,
+        "name":"Johan",
+        "comment":"G\u00f6r de fortfarande Windows-telefoner? Beh\u00f6ver blir b\u00e4ttre!",
+        "grade":3,
+        "product_id":4,
+        "created_at":null,
+        "updated_at":null
+    },
+    {
+        "id":8,
+        "name":"Anton",
+        "comment":"Klart b\u00e4ttre \u00e4n f\u00f6rv\u00e4ntat!",
+        "grade":4,
+        "product_id":4,
+        "created_at":null,
+        "updated_at":null
+    }
+]
