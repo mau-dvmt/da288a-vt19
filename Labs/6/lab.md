@@ -2,7 +2,7 @@
 
 I denna labb ska vi titta närmre på Laravel och bygga vår första webbapplikation med ett GUI. Laborationen kommer vara uppbyggd stegvis och kommer kräva att ni tittar nämre och lär er att hitta i [Laravels dokumentation](https://laravel.com/docs/5.8). Tacksamt nog är Laravel ett väldokumenterat ramverk med både tydliga förklaring och mycket kodexempel. Så vid varje del i laboration så kommer det att refereras till olika delar av Laravels dokumentation, där ni förväntas att hitta svar på eventuella frågor.
 
-Laravel är _storebror_ till ramverket [Lumen](lumen.laravel.com) och således kommer du att känna igen er mycket, speciellt från [föregående laboration](../5/lumen.md).
+Laravel är _storebror_ till ramverket [Lumen](http://lumen.laravel.com) och således kommer du att känna igen er mycket, speciellt från [föregående laboration](../5/lab.md).
 
 Den kod som vi skrev till tillhörande föreläsning hittar nu här: [Kommer snart...](#).
 
@@ -42,7 +42,7 @@ Vi kommer i denna labb att utgå från samma case (med *product* som resurs), me
 
 #### Migration
 
-Utgå från [migrations-filen för produkter som du skapde i förra laborationen](../5/lumen.md#212-skapa-migrations) och kopiera den (som ligger i mappen `database/migrations`) från Lumen-projektet till ditt nyskapade Laravel-projekt. Som du kanske ser finns det redan `migrations`-filer i ditt Laravel-projekt (som förbereder användharntering och login), som du kan ta bort, då vårt projekt ej kommer att använda sig utav inloggning. Kör sedan:
+Utgå från [migrations-filen för produkter som du skapde i förra laborationen](../5/lab.md#212-skapa-migrations) och kopiera den (som ligger i mappen `database/migrations`) från Lumen-projektet till ditt nyskapade Laravel-projekt. Som du kanske ser finns det redan `migrations`-filer i ditt Laravel-projekt (som förbereder användharntering och login), som du kan ta bort, då vårt projekt ej kommer att använda sig utav inloggning. Kör sedan:
 
 ```bash
 php artisan migrate
@@ -56,7 +56,7 @@ Skapa en ny databas-seed genom:
 php aristan make:seed ProductTableSeed
 ```
 
-Kopiera sedan innehållet från [seeds-filen för produkter som du skapade i förra laborationen](../5/lumen.md#213-skapa-seeding) (som ligger i mappen `database`) och klistra in detta i den nyskapade `ProductTableSeed`. Glöm sedan inte att i filen `databaseSeeder.php` att ange vilka `seeds` som ska köras (i functionen `run()`):
+Kopiera sedan innehållet från [seeds-filen för produkter som du skapade i förra laborationen](../5/lab.md#213-skapa-seeding) (som ligger i mappen `database`) och klistra in detta i den nyskapade `ProductTableSeed`. Glöm sedan inte att i filen `databaseSeeder.php` att ange vilka `seeds` som ska köras (i functionen `run()`):
 
 ```php
 $this->call(MoviesTableSeeder::class);
