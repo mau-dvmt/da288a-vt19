@@ -40,4 +40,4 @@ Följande krav finns på uppgiften:
 ## Inlämning & deadline
 Inlämningen sker genom att ni publicerar er lösning på Github och skickar in adressen till er lösning på Canvas. Denna uppgift får göras i team om två, där båda ska kunna redogöra för skriven kod.
 
-Uppgiften ska vara inlämnad senaste söndagen den *3:e maj*, 23.59, **tillsammans med uppgift 3b**.
+Uppgiften ska vara inlämnad senaste söndagen den *3:e juni*, 23.59, **tillsammans med uppgift 3b**.
