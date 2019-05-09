@@ -42,7 +42,7 @@ Vi kommer i denna labb att utgå från samma case (med *product* som resurs), me
 
 #### Migration
 
-Utgå från [migrations-filen för produkter som du skapde i förra laborationen](../5/lab.md#212-skapa-migrations) och kopiera den (som ligger i mappen `database/migrations`) från Lumen-projektet till ditt nyskapade Laravel-projekt. Som du kanske ser finns det redan `migrations`-filer i ditt Laravel-projekt (som förbereder användharntering och login), som du kan ta bort, då vårt projekt ej kommer att använda sig utav inloggning. Kör sedan:
+Utgå från [migrations-filen för produkter som du skapde i förra laborationen](../5/lab.md#212-skapa-migrations) och kopiera den (som ligger i mappen `database/migrations`) från Lumen-projektet till ditt nyskapade Laravel-projekt. Som du kanske ser finns det redan `migrations`-filer i ditt Laravel-projekt (som förbereder användharntering och login), låt dem vara kvar - vi kommer att använda dem senare i labben. Kör sedan:
 
 ```bash
 php artisan migrate
