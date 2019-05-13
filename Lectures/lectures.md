@@ -11,5 +11,5 @@ Nedan hittar ni en lista på föreläsningar och ev. exempel på föreläsningar
 8. [PHP - Lumen + ORM + Migrations](/Lectures/8/lecture.md)
 9. [PHP - MVC och Laravel](/Lectures/9/lecture.md)
 10. [PHP - Mer om Laravel](/Lectures/10/lecture.md)
-11. [Testning](/Lectures/11/lecture.md)
-12. [Refaktorisering och integration](/Lectures/12/lecture.md)
+11. [Testning och refaktorisering](/Lectures/11/lecture.md)
+12. [Integration och Azuredeployment](/Lectures/12/lecture.md)

@@ -1,3 +1,3 @@
-# Föreläsning 11: Testning
+# Föreläsning 11: Testning och refaktorisering
 
-Kommer snart!
+[Presentation](testning-refaktorisering.pdf)
