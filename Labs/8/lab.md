@@ -1,3 +1,3 @@
-# Laboration 8: Testning och refaktorisering
+# Laboration 8: Integration och Azuredeployment
 
 Kommer snart!

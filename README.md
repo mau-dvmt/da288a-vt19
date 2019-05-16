@@ -22,8 +22,8 @@ På denna sida hittar du information som är kopplat till kursen DA288A - Molnba
 4. [Versionshantering](/Labs/4/lab.md)
 5. [Lumen med Controllers, ORM, Migration](/Labs/5/lab.md)
 6. [Webbapplikation med inloggning](/Labs/6/lab.md)
-7. [Refaktorisering och integration](/Labs/7/lab.md)
-8. [Testning och refaktorisering](/Labs/8/lab.md)
+7. [Testning och refaktorisering](/Labs/7/lab.md)
+8. [Integration och Azuredeployment](/Labs/8/lab.md)
 
 ## Inlämningsuppgifter
 - [Inlämning 1](/Assignments/1/assignment.md)
