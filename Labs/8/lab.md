@@ -445,3 +445,5 @@ Gör en liten förändring av Insultr-koden. Inget stort, testa att göra en kos
 Nu har du skapat en php-applikation, satt upp en toolchain för CI/CD i en molntjänst med hjälp av någorlunda moderna utvecklingsmetoder och borde vara nöjd med dig själv. Precis det som kursen skulle ta upp. Wohoo!
 
 ![Thank you, Lord!](https://media1.giphy.com/media/l0Iy6SpDSTZvODKak/giphy.gif?cid=790b76115cf07772662f4e792ed98563&rid=giphy.gif)
+
+Ja, just det. Molntjänster kostar pengar. Vi, skattebetalarna, blir jätteglada om du tar bort dina Azure-resurser när du är klar med laborationen.
