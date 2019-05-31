@@ -49,9 +49,9 @@ Följande krav finns på uppgiften:
 - Ni ska beskriva två förslag på refaktoriseringar som ni skulle kunna göra i er kod, samt beskriva varför de är relevanta. Lägg dessa i en fil som heter *refactor.md*
 - Ni ska skriva minst tio relevanta tester och kunna redogöra (med hjälp av kommentarer i koden) varför ni valt just dessa tester
 - Ni ska använda er av `Azure Pipelines` för att automatisera testning, bygge och driftsättning av er applikation
-- Ni ska ha en driftsatt version av er applikation
+- Ni ska ha en driftsatt version av er applikation. Denna länkar ni till i er *README.md*-fil
 
 ## Inlämning & deadline
-Inlämningen sker genom att ni publicerar er lösning på Github och skickar in adressen till er lösning, samt adressen till er driftsatta webbapplikation, på Canvas. Denna uppgift får göras i team om två, där båda ska kunna redogöra för skriven kod.
+Inlämningen sker genom att ni publicerar er lösning på Github och skickar in adressen till er lösning på Canvas. Denna uppgift får göras i team om två, där båda ska kunna redogöra för skriven kod.
 
 Uppgiften ska vara inlämnad senast onsdagen den *12:e juni*, 23.59.
