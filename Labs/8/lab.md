@@ -99,7 +99,7 @@ Här hittar du under *Inställningar* valet *Åtkomstnycklar*. Följ den länken
 Nu ska du få bygga om din Docker-avbildning igen. Egentligen ska den bara få ett nytt namn innan den kan publiceras. Kom ihåg ditt registernamn från föregående stycke och skriv så här:
 
 ```bash
-$ docker build -d dittregisternamn.azurecr.io/insultr:latest
+$ docker build -t dittregisternamn.azurecr.io/insultr:latest .
 ```
 
 Nu har du en ny, fin registerbild som vi kan skicka upp. Först måste du dock logga in på *Azure Container Registry*. För det behöver du inloggningsserver, användarnamn och lösenord från ovan. Logga in genom att skriva
